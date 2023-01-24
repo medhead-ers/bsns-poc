@@ -15,7 +15,7 @@
 	<name>bsns_pms</name>
 	<description>BSNS - POC Patient - MS Boiler Plate</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 		<sonar.organization>medhead-ers</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
