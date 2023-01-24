@@ -18,6 +18,7 @@
 		<java.version>19</java.version>
 		<sonar.organization>medhead-ers</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<property name="sonar.java.binaries" value="target" />
 	</properties>
 	<!-- DEPENDENCIES -->
 	<dependencies>
