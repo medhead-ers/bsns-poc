@@ -1,18 +1,6 @@
-name: Build and test
-
+name: Build et Test
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 19 (Temurin)
-        uses: actions/setup-java@v3
-        with:
-          java-version: '19'
-          distribution: 'temurin'
-          cache: maven
-      - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots package
+    build-and-test:
+        uses: medhead-ers/ci-cd-templates/.github/workflows/java_build-and-test.yml@main
