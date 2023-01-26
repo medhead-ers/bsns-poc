@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
 public class DataSampleLoader {
     @Bean
     CommandLineRunner initDatabase(PatientRepository patientRepository) {
-        return  args -> {
-            patientRepository.save(new Patient("John", "Doe", 25, Gender.MALE));
-            patientRepository.save(new Patient("Julia", "Sanderson", 48, Gender.FEMALE));
-            patientRepository.save(new Patient("Duke", "Nukem", 62, Gender.UNKNOWN));
+        return args -> {
+            patientRepository.save(Patient.builder().firstName("John").lastName("Doe").age(25).gender(Gender.MALE).build());
+            patientRepository.save(Patient.builder().firstName("Julia").lastName("Sanderson").age(48).gender(Gender.FEMALE).build());
+            patientRepository.save(Patient.builder().firstName("Duke").lastName("Nukem").age(62).gender(Gender.UNKNOWN).build());
         };
     }
 }

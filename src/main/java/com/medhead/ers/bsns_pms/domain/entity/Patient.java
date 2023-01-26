@@ -8,8 +8,8 @@ import org.hibernate.annotations.GenericGenerator;
 import java.util.UUID;
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Entity
 public class Patient
@@ -19,8 +19,11 @@ public class Patient
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "id", columnDefinition = "VARCHAR(36)")
     private UUID id;
+    @NonNull
     private String firstName;
+    @NonNull
     private String lastName ;
+    @NonNull
     private Integer age;
     private Gender gender = Gender.UNKNOWN;
 
