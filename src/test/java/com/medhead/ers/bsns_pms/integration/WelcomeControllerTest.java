@@ -1,4 +1,4 @@
-package com.medhead.ers.bsns_pms;
+package com.medhead.ers.bsns_pms.integration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

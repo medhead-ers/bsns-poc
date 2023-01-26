@@ -1,6 +1,7 @@
 package com.medhead.ers.bsns_pms.domain.entity;
 
 import com.medhead.ers.bsns_pms.domain.valueObject.Gender;
+import com.medhead.ers.bsns_pms.exception.InvalidPatientAgeException;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -14,6 +15,9 @@ import java.util.UUID;
 @Entity
 public class Patient
 {
+    public final static int MAXIMUM_PATIENT_AGE = 150;
+    public final static int MINIMUM_PATIENT_AGE = 0;
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
@@ -35,4 +39,10 @@ public class Patient
         this.lastName = lastName.toUpperCase();
     }
 
+    public void setAge(int age) throws InvalidPatientAgeException {
+        if(age > MAXIMUM_PATIENT_AGE || age < MINIMUM_PATIENT_AGE) {
+            throw new InvalidPatientAgeException(age);
+        }
+        this.age = age;
+    }
 }
