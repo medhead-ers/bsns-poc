@@ -1,8 +1,9 @@
 package com.medhead.ers.bsns_pms.application.controller;
 
-import com.medhead.ers.bsns_pms.data.repository.PatientRepository;
 import com.medhead.ers.bsns_pms.domain.entity.Patient;
-import com.medhead.ers.bsns_pms.exception.PatientNotFoundException;
+import com.medhead.ers.bsns_pms.domain.service.definition.PatientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,24 +11,23 @@ import java.util.UUID;
 
 @RestController
 public class PatientController {
-    private final PatientRepository patientRepository;
-    public PatientController(PatientRepository patientRepository) {
-        this.patientRepository = patientRepository;
-    }
+    @Autowired
+    private PatientService patientService;
+
     @GetMapping("/patients")
-    List<Patient> all(){
-        return patientRepository.findAll();
+    List<Patient> all() {
+        return patientService.getAllPatient();
     }
 
-    @GetMapping("/patients/{id}")
-    Patient one(@PathVariable UUID id){
-        return patientRepository.findById(id).orElseThrow(() -> new PatientNotFoundException(id));
+    @GetMapping("/patients/{uuid}")
+    Patient one(@PathVariable UUID uuid) {
+        return patientService.getPatientById(uuid);
     }
 
     @PostMapping("/patients")
+    @ResponseStatus(HttpStatus.CREATED)
     Patient newPatient(@RequestBody Patient patient) {
-        return patientRepository.save(patient);
+        return patientService.savePatient(patient);
     }
-
 
 }
