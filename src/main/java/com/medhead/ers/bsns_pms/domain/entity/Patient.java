@@ -15,8 +15,8 @@ import java.util.UUID;
 @Entity
 public class Patient
 {
-    public final static int MAXIMUM_PATIENT_AGE = 150;
-    public final static int MINIMUM_PATIENT_AGE = 0;
+    public static final int MAXIMUM_PATIENT_AGE = 150;
+    public static final int MINIMUM_PATIENT_AGE = 0;
 
     @Id
     @GeneratedValue(generator = "uuid2")
