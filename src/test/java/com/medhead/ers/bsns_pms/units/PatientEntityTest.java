@@ -3,7 +3,6 @@ package com.medhead.ers.bsns_pms.units;
 import com.medhead.ers.bsns_pms.domain.entity.Patient;
 import com.medhead.ers.bsns_pms.domain.valueObject.Gender;
 import com.medhead.ers.bsns_pms.exception.InvalidPatientAgeException;
-import com.medhead.ers.bsns_pms.exception.PatientNotFoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
