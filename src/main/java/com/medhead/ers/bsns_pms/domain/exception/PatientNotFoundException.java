@@ -1,4 +1,4 @@
-package com.medhead.ers.bsns_pms.exception;
+package com.medhead.ers.bsns_pms.domain.exception;
 
 import java.util.UUID;
 

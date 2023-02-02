@@ -1,8 +1,11 @@
 package com.medhead.ers.bsns_pms.domain.entity;
 
+import com.medhead.ers.bsns_pms.domain.exception.InvalidPatientAgeException;
 import com.medhead.ers.bsns_pms.domain.valueObject.Gender;
-import com.medhead.ers.bsns_pms.exception.InvalidPatientAgeException;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
