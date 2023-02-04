@@ -13,7 +13,7 @@
 	<artifactId>bsns_poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bsns_poc</name>
-	<description>BSNS - POC - MS Boiler Plate</description>
+	<description>BSNS POC - MS Boiler Plate</description>
 	<properties>
 		<java.version>19</java.version>
 		<sonar.organization>medhead-ers</sonar.organization>
