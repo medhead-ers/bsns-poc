@@ -10,14 +10,14 @@
 	</parent>
 	<!-- PROJECT DESCRIPTION-->
 	<groupId>com.medhead.ers</groupId>
-	<artifactId>bsns_pms</artifactId>
+	<artifactId>bsns_poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bsns_pms</name>
-	<description>BSNS - POC Patient - MS Boiler Plate</description>
+	<name>bsns_poc</name>
+	<description>BSNS - POC - MS Boiler Plate</description>
 	<properties>
 		<java.version>19</java.version>
 		<sonar.organization>medhead-ers</sonar.organization>
-  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<!-- DEPENDENCIES -->
 	<dependencies>
