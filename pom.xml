@@ -11,7 +11,7 @@
 	<!-- PROJECT DESCRIPTION-->
 	<groupId>com.medhead.ers</groupId>
 	<artifactId>bsns_poc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>bsns_poc</name>
 	<description>BSNS POC - MS Boiler Plate</description>
 	<properties>
