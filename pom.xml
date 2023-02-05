@@ -12,7 +12,7 @@
 	<!-- PROPERTIES  -->
 	<properties>
 		<!--À configurer pour chaque micro-services -->
-		<service.version>1.0.9</service.version>
+		<service.version>1.0.1</service.version>
 		<service.artifactid>bsns_poc</service.artifactid>
 		<service.github.package.url>https://maven.pkg.github.com/medhead-ers/bsns-poc</service.github.package.url>
 
