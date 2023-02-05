@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-	<!-- PROJECT DESCRIPTION-->
-	<groupId>com.medhead.ers</groupId>
-	<artifactId>bsns_poc</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>bsns_poc</name>
-	<description>BSNS POC - MS Boiler Plate</description>
+
+	<!-- PROPERTIES  -->
 	<properties>
+		<!--À configurer pour chaque micro-services -->
+		<service.version>1.0.9</service.version>
+		<service.artifactid>bsns_poc</service.artifactid>
+		<service.github.package.url>https://maven.pkg.github.com/medhead-ers/bsns-poc</service.github.package.url>
+
+		<!-- Commun à l'ensemble des micro-services  -->
 		<java.version>19</java.version>
 		<sonar.organization>medhead-ers</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
+
+	<!-- PROJECT DESCRIPTION-->
+	<groupId>com.medhead.ers</groupId>
+	<artifactId>${service.artifactid}</artifactId>
+	<version>${service.version}}</version>
+	<name>${service.artifactid}</name>
+
+	<!-- PACKAGE DEPLOYMENT -->
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>${service.github.package.url}</url>
+		</repository>
+	</distributionManagement>
+
 	<!-- DEPENDENCIES -->
 	<dependencies>
 		<dependency>
@@ -65,6 +83,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<!-- BUILD -->
 	<build>
 		<plugins>
@@ -82,6 +101,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<!-- PROFILES -->
 	<profiles>
 		<profile>
@@ -121,4 +141,5 @@
 			</build>
 		</profile>
 	</profiles>
+
 </project>
